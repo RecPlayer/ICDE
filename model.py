@@ -41,7 +41,7 @@ class DDEA(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.relu = nn.ReLU
     
-    def forward2(self, batch_user_1,batch_user_2, batch_user_x, batch_user_y):
+    def forward(self, batch_user_1,batch_user_2, batch_user_x, batch_user_y):
         h_user_x = self.encoder_x(self.dropout(batch_user_x))
         h_user_y = self.encoder_y(self.dropout(batch_user_y))
         h_user_1 = self.user_embeddings(batch_user_1)
