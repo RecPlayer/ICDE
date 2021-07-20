@@ -86,7 +86,7 @@ def test_process(model, train_loader_1,train_loader_2, feed_data, is_cuda, topK,
             v_item1 = torch.FloatTensor(v_item1)
             v_item2 = torch.FloatTensor(v_item2)
 
-        res = model.forward2(v_user_1,v_user_2, v_item1, v_item2)
+        res = model.forward(v_user_1,v_user_2, v_item1, v_item2)
         y1 = res[3] 
         y2 = res[2] 
         if is_cuda:
